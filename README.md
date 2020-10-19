@@ -12,11 +12,15 @@ The key is not included in the readme file, but I do have my key to access the a
 
 Simply this api will make a prediction based on a matchup of two teams!
 
-#### Snipped of API Data
+#### Snippet of API Data
 {"UpcomingGame":null,"TeamTrends":[],"TeamMatchupTrends":[],"OpponentMatchupTrends":[],"PreviousGames":[]}
 
+##### Trello Board Link
+https://trello.com/b/RPguXT19/project-management-for-sports-betting
 
-
-
+###### User experience 
+The user will be able to select a team from a dropdown menu of all teams on one side, and another dropdown menu of all teams on the other side. The layout will look as simple as (Select Team) vs. (Select Team)
+Press the button that says who might win? The prediction based on mathcup will give the user a result!
+** Do note that the predictions from this is not a guarantee of the actual result! 
 
 
