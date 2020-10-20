@@ -1,0 +1,33 @@
+body {  
+    background:#F7F7F7;
+    color:000;
+    font-family:'Satisfy', cursive;
+    line-height:16px;
+    font-size:11px;
+    margin:0;
+    text-align:left;
+}
+
+.rectangle1 {
+    position:fixed;
+    width:251px;
+    background:#ffffff;
+    height:401px;
+    left:34%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    box-shadow:1px 1px 2px 0px #e6e6e6;
+    letter-spacing:0.5px;
+}
+.rectangle2 {
+    position:fixed;
+    width:251px;
+    background:#ffffff;
+    height:401px;
+    left:59%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    box-shadow:1px 1px 2px 0px #e6e6e6;
+    letter-spacing:0.5px;
+    overflow:scroll;
+}
