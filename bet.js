@@ -1,34 +1,44 @@
-const api_key = '63f9364bc0a6b3654e314cb11fa27985'
+//     url: "https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/predict?team2=chelsea&team1=everton",
 
-let sport_key = 'americanfootball_nfl'
+let gamePrediction, userInput;
+//Game predition and userinput
 
-axios.get('https://api.the-odds-api.com/v3/odds', {
-    params: {
-        api_key: api_key,
-        sport: sport_key,
-        region: 'us', 
-        mkt: 'h2h' 
+const $team1 = $('#team1');
+const $team2 = $('#team2');
+const $result = $('#result');
+const $input = $('input[type="text"]');
+//Populate the dom with userinput for home team and away team with each as team1 and team2
+
+$('form').on('submit', handleGetData);
+
+const api_key= 'e47b52639fmsh8da4044912b4134p1c3797jsnd682dda7cb43'
+// Const api key to be used, set as a const
+
+//This is to prevent the refresh of the page
+function handleGetData(event) {
+    event.preventDefault();
+    userInput = $input.val();
+    axios.get("https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/predict?team2='+ userInput'&team1='+ userInput'", {
+    headers: {
+        "x-rapidapi-host": "heisenbug-premier-league-live-scores-v1.p.rapidapi.com",
+        "x-rapidapi-key": api_key
     }
-}).then(response => {
-    // odds_json['data'] contains a list of live and 
-    //   upcoming events and odds for different bookmakers.
-    // Events are ordered by start time (live events are first)
-    console.log(
-        `Successfully got ${response.data.data.length} events`,
-        `Here's the first event:`
-    )
-    console.log(JSON.stringify(response.data.data[0]))
-
-    // Check of usage
-    console.log()
-    console.log('Remaining requests',response.headers['x-requests-remaining'])
-    console.log('Used requests',response.headers['x-requests-used'])
-
 })
-.catch(error => {
-    console.log('Error status', error.response.status)
-    console.log(error.response.data)
+.then(response => {
+    console.log(JSON.stringify(response.data.team1))
+    console.log(JSON.stringify(response.data.team2))
+    console.log(JSON.stringify(response.data.result))
+    gamePrediction = response;
+    render();
 })
+}
+
+function render() {
+    $team1.text(response.data.team1);
+    $team2.text(response.data.team2);
+    $result.text(response.data.result);
+}
+
 
 
 

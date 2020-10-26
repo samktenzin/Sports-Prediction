@@ -1,7 +1,7 @@
 body {  
     background:#F7F7F7;
     color:000;
-    font-family:'Satisfy', cursive;
+    font-family:'Times New Roman', Times, serif;
     line-height:16px;
     font-size:11px;
     margin:0;
@@ -10,24 +10,43 @@ body {
 
 .rectangle1 {
     position:fixed;
-    width:251px;
+    width:365px;
     background:#ffffff;
-    height:401px;
+    height:525px;
     left:34%;
     top:50%;
     transform: translate(-50%, -50%);
     box-shadow:1px 1px 2px 0px #e6e6e6;
     letter-spacing:0.5px;
 }
+
+.image {
+    width:85px;
+    position:center;
+    height:auto;
+    left:65px;
+    top:35px;
+    display: inline-block;
+}
+.image img{
+    width:85px;
+    height:85px;
+    border-radius:150px;
+    justify-content: space-between;
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
 .rectangle2 {
     position:fixed;
-    width:251px;
+    width:365px;
     background:#ffffff;
-    height:401px;
-    left:59%;
+    height:525px;
+    left:65%;
     top:50%;
     transform: translate(-50%, -50%);
     box-shadow:1px 1px 2px 0px #e6e6e6;
     letter-spacing:0.5px;
-    overflow:scroll;
 }
