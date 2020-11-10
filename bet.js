@@ -34,7 +34,7 @@ var data1 = localStorage.getItem('team1');
 var data2 = localStorage.getItem('team2');
 var data3 = localStorage.getItem('result')
 
-
+//Append data to dom
 console.log(data1);
 if (data1) {
     document.getElementById('team1').innerText = data1
