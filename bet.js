@@ -21,22 +21,23 @@ document.addEventListener('submit', function (event) {
         console.log(JSON.stringify(response.data.team1))
         console.log(JSON.stringify(response.data.team2))
         console.log(JSON.stringify(response.data.result))
-        localStorage.setItem('bettingData', JSON.stringify(response.data));
+        localStorage.setItem('team1', response.data.team1);
+        localStorage.setItem('team2', response.data.team2);
+        localStorage.setItem('result', response.data.result);
 
         window.location = './result.html';
     })
 });
 
-
-
 // Get data
-var data = localStorage.getItem('bettingData');
+var data1 = localStorage.getItem('team1');
+var data2 = localStorage.getItem('team2');
+var data3 = localStorage.getItem('result')
 
-console.log(data);
-if (data) {
-	document.getElementById('bettingResult').innerText = data;
+
+console.log(data1);
+if (data1) {
+    document.getElementById('team1').innerText = data1
+    document.getElementById('team2').innerText = data2
+    document.getElementById('result').innerText = data3
 }
-
-
-
-
